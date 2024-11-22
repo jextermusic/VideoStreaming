@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+
+#wrapper{
+    height: 50%;
+    width: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    gap: 50%;
+    align-items: center;
+}
+
+#topflex{
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+}
+
+#topflex p {
+    font-family: Advent Pro;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+#stormshare{
+    font-size: 4rem;
+    font-family: monospace;
+    color: white;
+}

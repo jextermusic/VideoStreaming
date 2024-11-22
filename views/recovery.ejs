@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="main">
+    <%- include('header') %>
+    <div id="recoveryform">
+        <form action="" method="post">
+            <h3>Email</h3>
+            <input placeholder="Enter your email here" type="email" name="email" id="email">
+            <button id="submit" type="submit">Verify</button>
+        </form> 
+        <div class="loader"></div>   
+        <% if (emailnotfound) { %>
+            <h4 class="alert alert-info"><%= emailnotfound %></h4>
+        <% } %>    
+    </div>
+      <script>
+        var btn = document.querySelector('#submit')
+        var loader = document.querySelector('.loader')
+        var emailerror = document.querySelector('h4')
+        btn.addEventListener("click", function(){
+            loader.style.display = "block";
+            emailerror.style.display = "none"
+        })
+        
+      </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="main">
+    <%- include('header') %>
+    
+    <div id="login">
+      <h1>Login</h1>
+      <form method="post" action="/login">
+        <label for="username">Username</label>
+        <input id="username" name="username" placeholder="Enter your username" type="text" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" placeholder="Enter your password" type="password" required>
+        <button id="login-btn" type="submit" disabled>Login</button>
+      </form>
+      <a href="/account_recovery">Forgot Password</a>
+      <a href="/register">Don't have an account?</a>
+    </div>
+  </div>
+  <script>
+    var username = document.querySelector('#username');
+  var btn = document.querySelector('#login-btn');
+
+  function checkInputs() {
+    if (username.value === '') {
+      btn.disabled = true;
+    } else {
+      btn.disabled = false;
+    }
+  }
+
+ 
+  username.addEventListener('input', checkInputs);
+  </script>
+</body>
+</html>
